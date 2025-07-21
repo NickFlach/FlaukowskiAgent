@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --muted: hsl(240, 4.8%, 95.9%);
+  --muted-foreground: hsl(240, 3.7%, 45.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --border: hsl(240, 5.9%, 90%);
+  --input: hsl(240, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(240, 4.8%, 95.9%);
+  --secondary-foreground: hsl(240, 5.9%, 10%);
+  --accent: hsl(240, 4.8%, 95.9%);
+  --accent-foreground: hsl(240, 5.9%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 10%, 3.9%);
+  --radius: 0.5rem;
+
+  /* Custom Flaukowski colors */
+  --navy-900: hsl(237, 51%, 7%);
+  --navy-800: hsl(237, 32%, 14%);
+  --navy-700: hsl(237, 32%, 16%);
+  --navy-600: hsl(224, 47%, 24%);
+  --trading-blue: hsl(207, 80%, 27%);
+  --success-green: hsl(162, 100%, 42%);
+  --alert-red: hsl(0, 69%, 67%);
+  --warning-orange: hsl(348, 77%, 62%);
+  --text-light: hsl(210, 17%, 98%);
+  --text-muted: hsl(220, 14%, 58%);
+}
+
+.dark {
+  --background: hsl(237, 51%, 7%);
+  --foreground: hsl(210, 17%, 98%);
+  --muted: hsl(237, 32%, 14%);
+  --muted-foreground: hsl(220, 14%, 58%);
+  --popover: hsl(237, 32%, 14%);
+  --popover-foreground: hsl(210, 17%, 98%);
+  --card: hsl(237, 32%, 14%);
+  --card-foreground: hsl(210, 17%, 98%);
+  --border: hsl(224, 47%, 24%);
+  --input: hsl(224, 47%, 24%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(237, 32%, 16%);
+  --secondary-foreground: hsl(210, 17%, 98%);
+  --accent: hsl(237, 32%, 16%);
+  --accent-foreground: hsl(210, 17%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 17%, 98%);
+  --ring: hsl(220, 14%, 58%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-navy-900 { color: hsl(237, 51%, 7%); }
+  .text-navy-800 { color: hsl(237, 32%, 14%); }
+  .text-navy-700 { color: hsl(237, 32%, 16%); }
+  .text-navy-600 { color: hsl(224, 47%, 24%); }
+  .text-trading-blue { color: hsl(207, 80%, 27%); }
+  .text-success-green { color: hsl(162, 100%, 42%); }
+  .text-alert-red { color: hsl(0, 69%, 67%); }
+  .text-warning-orange { color: hsl(348, 77%, 62%); }
+  .text-text-light { color: hsl(210, 17%, 98%); }
+  .text-text-muted { color: hsl(220, 14%, 58%); }
+
+  .bg-navy-900 { background-color: hsl(237, 51%, 7%); }
+  .bg-navy-800 { background-color: hsl(237, 32%, 14%); }
+  .bg-navy-700 { background-color: hsl(237, 32%, 16%); }
+  .bg-navy-600 { background-color: hsl(224, 47%, 24%); }
+  .bg-trading-blue { background-color: hsl(207, 80%, 27%); }
+  .bg-success-green { background-color: hsl(162, 100%, 42%); }
+  .bg-alert-red { background-color: hsl(0, 69%, 67%); }
+  .bg-warning-orange { background-color: hsl(348, 77%, 62%); }
+
+  .border-navy-600 { border-color: hsl(224, 47%, 24%); }
+  .border-navy-700 { border-color: hsl(237, 32%, 16%); }
+
+  .hover\:bg-navy-700:hover { background-color: hsl(237, 32%, 16%); }
+  .hover\:text-text-light:hover { color: hsl(210, 17%, 98%); }
+}
