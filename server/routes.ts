@@ -93,7 +93,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const agentData = insertAgentSchema.parse({
         userId: user.id,
         name: `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)} Agent`,
-        targetAddress: "REDACTED_WALLET_ADDRESS",
+        targetAddress: process.env.TARGET_WALLET_ADDRESS || "",
         simulationMode: true,
         status: "inactive"
       });

@@ -100,7 +100,7 @@ export default function Login({ onLogin }: LoginProps) {
 
       // Send 0.001 ETH to the target address
       const tx = await signer.sendTransaction({
-        to: "REDACTED_WALLET_ADDRESS",
+        to: import.meta.env.VITE_TARGET_WALLET_ADDRESS || "",
         value: ethers.parseEther("0.001")
       });
 
@@ -223,7 +223,7 @@ export default function Login({ onLogin }: LoginProps) {
                         Amount: <span className="font-mono">0.001 ETH</span>
                       </div>
                       <div className="text-sm text-muted-foreground">
-                        To: <span className="font-mono text-xs">REDACTED_WALLET_ADDRESS</span>
+                        To: <span className="font-mono text-xs">{import.meta.env.VITE_TARGET_WALLET_ADDRESS || "Configure wallet in .env"}</span>
                       </div>
                     </div>
 

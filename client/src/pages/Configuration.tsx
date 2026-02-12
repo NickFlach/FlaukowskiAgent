@@ -93,7 +93,7 @@ export default function Configuration() {
     resolver: zodResolver(agentConfigSchema),
     defaultValues: {
       name: "Flaukowski",
-      targetAddress: "REDACTED_WALLET_ADDRESS",
+      targetAddress: import.meta.env.VITE_TARGET_WALLET_ADDRESS || "",
       simulationMode: true,
     },
   });
@@ -103,7 +103,7 @@ export default function Configuration() {
     if (agentStatus?.agent) {
       form.reset({
         name: agentStatus.agent.name || "Flaukowski",
-        targetAddress: agentStatus.agent.targetAddress || "REDACTED_WALLET_ADDRESS",
+        targetAddress: agentStatus.agent.targetAddress || import.meta.env.VITE_TARGET_WALLET_ADDRESS || "",
         simulationMode: agentStatus.agent.simulationMode ?? true,
       });
     }
@@ -529,7 +529,7 @@ export default function Configuration() {
                           if (confirm("Are you sure you want to reset all configuration? This cannot be undone.")) {
                             form.reset({
                               name: "Flaukowski",
-                              targetAddress: "REDACTED_WALLET_ADDRESS",
+                              targetAddress: import.meta.env.VITE_TARGET_WALLET_ADDRESS || "",
                               simulationMode: true,
                             });
                           }

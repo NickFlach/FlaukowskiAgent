@@ -69,7 +69,7 @@ export default function Portfolio() {
     performance: strategy.performance || {},
   }));
 
-  const targetAddress = "REDACTED_WALLET_ADDRESS";
+  const targetAddress = import.meta.env.VITE_TARGET_WALLET_ADDRESS || "";
 
   return (
     <div className="min-h-screen bg-navy-900">
